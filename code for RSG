@@ -1,0 +1,45 @@
+import random
+
+subjects = [
+    "The purple monkey",
+    "A tiny dragon",
+    "My cat",
+    "The dancing banana",
+    "A robot",
+    "The sleepy turtle"
+]
+
+verbs = [
+    "eats",
+    "builds",
+    "finds",
+    "chases",
+    "paints",
+    "invents"
+]
+
+objects = [
+    "a giant pizza",
+    "a secret spaceship",
+    "a magical hat",
+    "a golden sandwich",
+    "a flying skateboard",
+    "a mysterious cookie"
+]
+
+def generate_sentence():
+    subject = random.choice(subjects)
+    verb = random.choice(verbs)
+    obj = random.choice(objects)
+    return f"{subject} {verb} {obj}."
+count = 0
+while True:
+    if count > 0:
+        print("Press the Enter to generate new sentence.")
+        count += 1
+        sentence = input()
+    elif count == 0:
+        print("Hello this is your first sentence.")
+        count += 1
+
+    print(generate_sentence())
